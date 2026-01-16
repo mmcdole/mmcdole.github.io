@@ -1,0 +1,222 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Modified for : Matthew McDole (Executive Profile)
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1}
+}
+
+% MAIN HEADER COMMAND (Company | Location)
+\newcommand{\resumeCompanyHeader}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+% COMPANY DESCRIPTION COMMAND
+\newcommand{\resumeCompanyDesc}[1]{
+    \vspace{1pt}
+    \begin{tabular*}{0.97\textwidth}{l}
+      \textit{\small#1} \\
+    \end{tabular*}\vspace{-3pt}
+}
+
+% ROLE COMMAND (Role | Date)
+\newcommand{\resumeRole}[2]{
+    \vspace{4pt}
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+% PREVIOUS EXPERIENCE COMMAND
+% Fixed to match exact font size of main experience
+\newcommand{\resumePreviousExp}[3]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} $|$ \emph{#2} & \textit{\small #3} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Matthew McDole} \\ \vspace{6pt}
+    \small Frisco, Texas $|$ 660-441-0882 $|$ \href{mailto:matthew.mcdole@gmail.com}{\underline{matthew.mcdole@gmail.com}} \\ \vspace{2pt}
+    \href{https://linkedin.com/in/matthewmcdole}{\underline{linkedin.com/in/matthewmcdole}} $|$
+    \href{https://github.com/mmcdole}{\underline{github.com/mmcdole}}
+\end{center}
+
+
+%-----------EXECUTIVE SUMMARY-----------
+\section{Executive Summary}
+\vspace{3pt}
+Global Chief Technology Officer who built and scaled \textbf{Byte by Yum}, a \textbf{proprietary technology platform processing \$20B annually} spanning POS, digital commerce, kitchen, and back-of-house operations for a Fortune 500 restaurant enterprise. Leads \textbf{900+ engineers} with brand CTOs as direct reports, processing \textbf{4M+ daily transactions} at \textbf{99.99\% availability}. Drives AI adoption from personalization engines to demand forecasting and drive-thru voice ordering, while navigating M\&A integration and legacy modernization at enterprise scale.
+\vspace{-5pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    %-----------YUM BRANDS-----------
+    \resumeCompanyHeader{Yum! Brands}{Plano, Texas}
+    \resumeCompanyDesc{Global quick-service restaurant company with 61,000 locations in 155 countries (KFC, Taco Bell, Pizza Hut).}
+    
+    % CURRENT ROLE
+    \resumeRole{Global Chief Technology Officer}{03/2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Leads technology organizations across Pizza Hut, Taco Bell, KFC, and KFC UK, with brand CTOs as direct reports.}
+        \resumeItem{Presents annual technology strategy and operating plan to Yum executive leadership including CEO, CFO, and brand CEOs.}
+        \resumeItem{Delivered \textbf{99.99\% platform availability} against 99.95\% SLA target, protecting \$4.5--6M in revenue; featured in AWS re:Invent 2025 case study for resilience architecture.}
+        \resumeItem{Shipped \textbf{Byte Connect} aggregator platform from concept to production in 90 days, generating \textbf{\$7M first-year revenue}.}
+        \resumeItem{Driving AI adoption across engineering and operations: deployed coding assistants to improve developer productivity, prototyped \textbf{SmartScale}, an AI-powered platform that verifies order accuracy by weight, and partnered with Data Team on Voice AI architecture for autonomous drive-thru ordering.}
+        \resumeItem{Established enterprise architecture function that unified disparate brand platforms onto common foundations, eliminating duplicative vendor contracts and directing teams toward shared internal solutions.}
+        \resumeItem{Expanded engineering capacity 30\% through strategic nearshore centers in Vietnam and Colombia while reducing cost structure.}
+      \resumeItemListEnd
+
+    % VP ROLE
+    \resumeRole{Vice President of Engineering, Yum! D\&T}{01/2024 -- 03/2025}
+     \resumeItemListStart
+        \resumeItem{Led 275 engineers owning the full Byte by Yum platform suite including Commerce, Menu, POS, Kitchen, Fleet, and Coach.}
+        \resumeItem{Unified four independent engineering organizations under single matrixed structure, reducing cross-team dependencies and accelerating feature delivery.}
+        \resumeItem{Led technology due diligence for TicTuk and Tracks acquisitions; integrated TicTuk, Tracks, and Dragontail into Byte platform, consolidating infrastructure and retaining key engineering talent.}
+        \resumeItem{Accelerated deployment of \textbf{Byte POS}, a modern Android-based point-of-sale system, from 300 to 7,500 US restaurants, creating a standardized front-of-house technology footprint.}
+        \resumeItem{Scaled \textbf{Tracks} back-of-house system from 300 Habit Burger locations to \textbf{7,000+ Taco Bell restaurants}; partnered with Chief Data Officer to integrate AI-powered demand forecasting for labor and inventory optimization.}
+        \resumeItem{Migrated Taco Bell, KFC, and Pizza Hut US onto unified first-party commerce platform; hardened Byte Commerce to sustain \textbf{300+ orders/second} (12x legacy capacity), enabling high-volume promotional campaigns like Taco Tuesday.}
+        \resumeItem{Delivered \textbf{Customer Intelligence Engine}, providing AI-powered cart recommendations that increase average order value through personalized upselling.}
+     \resumeItemListEnd
+
+    % SENIOR DIRECTOR ROLE
+    \resumeRole{Senior Director of Engineering, Digital}{04/2022 -- 01/2024}
+     \resumeItemListStart
+        \resumeItem{Led 85+ engineers and architects across Byte Commerce and Menu platforms with \$23M budget; assumed Product leadership during executive transition.}
+        \resumeItem{\textbf{Scaled the Menu platform globally}, transitioning Pizza Hut's menu authoring for 6,600 stores and driving adoption across the KFC fleet.}
+        \resumeItem{Migrated Taco Bell and Habit Burger to the new proprietary payment platform, processing \textbf{\$2B+ in annual digital sales}.}
+        \resumeItem{Migrated ordering system from legacy state-machine to \textbf{Temporal workflow engine}, eliminating order loss during infrastructure failures; presented architecture at Temporal Replay Conference (2023, 2024).}
+     \resumeItemListEnd
+
+    % DIRECTOR ROLE
+    \resumeRole{Director of Engineering, eCommerce}{04/2020 -- 04/2022}
+     \resumeItemListStart
+        \resumeItem{Built and launched \textbf{Byte Commerce}, creating the foundation that now processes \textbf{1.2M daily digital orders}.}
+        \resumeItem{\textbf{Designed the core Byte Menu system} and unified data models to serve as the single source of truth for all channels; reduced menu publishing time from \textbf{48+ hours to $<$10 minutes}.}
+        \resumeItem{Onboarded KFC as the first brand, processing all digital transactions across 4,000+ stores and powering web and mobile apps.}
+        \resumeItem{Hired and developed 30+ engineers across 8 teams; designed federated GraphQL API architecture adopted as enterprise standard.}
+     \resumeItemListEnd
+
+    %-----------CIGNA-----------
+    \resumeCompanyHeader{Cigna (Formerly Express Scripts)}{Saint Louis, Missouri}
+    \resumeCompanyDesc{Fortune 20 healthcare company; largest pharmacy benefit manager in the U.S.}
+    
+    \resumeRole{Director of Engineering / Principal Engineer}{08/2017 -- 05/2020}
+      \resumeItemListStart
+        \resumeItem{Developed Auto Refill capability generating \textbf{\$8 million in incremental annual revenue}.}
+        \resumeItem{Delivered native iOS/Android rewrites of flagship Express Scripts and Accredo mobile applications.}
+        \resumeItem{Directed mobile engineering and API teams, building the modern service layer that enabled flagship applications to transition off legacy Mainframe and AS/400 dependencies.}
+      \resumeItemListEnd
+
+    %-----------ENTERPRISE-----------
+    \resumeCompanyHeader{Enterprise Holdings}{Saint Louis, Missouri}
+    \resumeCompanyDesc{World's largest car rental provider (Enterprise, National, Alamo).}
+
+    \resumeRole{Department Lead Engineer, Mobile}{01/2013 -- 08/2017}
+      \resumeItemListStart
+        \resumeItem{\textbf{Launched the company's first-ever native mobile ecosystem}, building and deploying the flagship iOS and Android apps for Enterprise Rent-A-Car, National Car Rental, and Enterprise CarShare from the ground up.}
+        \resumeItem{Designed and implemented the \textbf{supporting mobile API layer and OAuth security framework}, enabling secure, real-time booking and inventory management for millions of users.}
+        \resumeItem{Scaled mobile organization from founding team to 25+ engineers across three product lines while establishing engineering standards adopted company-wide.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PREVIOUS EXPERIENCE-----------
+\section{Previous Experience}
+    \resumeSubHeadingListStart
+      \resumePreviousExp{Sr Software Engineer}{Aclara}{12/2011 -- 01/2013}
+      \resumePreviousExp{Software Engineer}{Scottrade Inc (Online brokerage, 3M+ accounts)}{05/2010 -- 12/2011}
+    \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeCompanyHeader{University of Central Missouri}{Warrensburg, MO}
+    \resumeRole{B.S., Computer Science}{}
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
