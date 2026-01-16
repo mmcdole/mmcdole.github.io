@@ -23,7 +23,7 @@
             --dot-size: 1.5px;
             --dot-spacing: 32px;
             --dot-opacity: 1;
-            --img-saturation: 0%;
+            --img-saturation: 100%;
             --img-hover-saturation: 100%;
         }
 
@@ -34,6 +34,17 @@
             --border: #e5e5e5;
             --dot: #e8e8e8;
             --accent: #000;
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root:not([data-theme="dark"]) {
+                --bg: #ffffff;
+                --fg: #000000;
+                --gray: #666;
+                --border: #e5e5e5;
+                --dot: #e8e8e8;
+                --accent: #000;
+            }
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -236,7 +247,7 @@
         /* Speaking Grid */
         .videos {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
         }
 
@@ -274,12 +285,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s;
-            background: rgba(0,0,0,0.3);
+            opacity: 0.6;
+            transition: opacity 0.3s, background 0.3s;
+            background: rgba(0,0,0,0.2);
         }
 
-        .video-card:hover .video-play { opacity: 1; }
+        .video-card:hover .video-play {
+            opacity: 1;
+            background: rgba(0,0,0,0.4);
+        }
 
         .video-play svg {
             width: 48px;
@@ -459,8 +473,10 @@
         <div class="hero-text">
             <h1>Building systems that scale.</h1>
             <p>
-                Engineering leader. Builder at heart.<br>
-                Currently serving millions of daily orders as Global CTO at Yum! Brands.
+                Engineering leader. Builder at heart.
+            </p>
+            <p>
+                Currently serving millions of daily orders as Global CTO at <a href="https://www.yum.com/wps/portal/yumbrands/Yumbrands/bytebyyum" target="_blank">Yum! Brands</a>.
             </p>
             <div class="links">
                 <a href="resume.pdf" target="_blank" class="pill pill-primary">
@@ -482,7 +498,7 @@
             </div>
         </div>
         <div class="hero-image">
-            <img src="assets/images/conference-2025.jpg" alt="Matthew McDole">
+            <img src="assets/images/portrait.jpg" alt="Matthew McDole">
         </div>
     </section>
 
@@ -499,6 +515,13 @@
                 </div>
                 <h3 class="video-title">AWS re:Invent 2025</h3>
                 <p class="video-meta">Featured Case Study</p>
+            </div>
+            <div class="video-card video-card-soon">
+                <div class="video-thumb">
+                    <img src="assets/images/conference-2025.jpg" alt="Global Franchisee Conference 2025" loading="lazy">
+                </div>
+                <h3 class="video-title">Global Franchisee Conference 2025</h3>
+                <p class="video-meta">Sydney, Australia</p>
             </div>
             <a href="https://www.youtube.com/watch?v=St5nSSZScHg" class="video-card" target="_blank" rel="noopener">
                 <div class="video-thumb">
