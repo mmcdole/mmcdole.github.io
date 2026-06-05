@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matthew McDole</title>
-    <meta name="description" content="Global CTO at Yum! Brands. Building systems that serve millions.">
+    <meta name="description" content="Chief Technology Officer at State Farm. Building systems that scale.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -345,6 +345,33 @@
             color: var(--gray);
         }
 
+        /* Podcast embeds */
+        .podcasts {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .podcast-card {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        [data-theme="light"] .podcast-card {
+            background: rgba(0, 0, 0, 0.02);
+        }
+
+        .podcast-card iframe {
+            width: 100%;
+            height: 152px;
+            border: 0;
+            border-radius: 12px;
+            display: block;
+            margin-top: 1rem;
+        }
+
         /* Minimalist Contact / CTA */
         .contact-section {
             text-align: center;
@@ -450,6 +477,10 @@
             .videos {
                 grid-template-columns: 1fr;
             }
+
+            .podcasts {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -482,7 +513,7 @@
                 Engineering leader. Builder at heart.
             </p>
             <p>
-                Currently serving millions of daily orders as Global CTO at <a href="https://www.yum.com/wps/portal/yumbrands/Yumbrands/bytebyyum" target="_blank">Yum! Brands</a>.
+                Currently CTO at <a href="https://www.statefarm.com" target="_blank" rel="noopener">State Farm</a>, engineering the platforms behind America's largest insurer.
             </p>
             <div class="links">
                 <a href="resume.pdf" target="_blank" class="pill pill-primary">
@@ -513,15 +544,16 @@
             <p class="section-label">Speaking</p>
         </div>
         <div class="videos">
-            <div class="video-card video-card-soon">
+            <a href="https://www.youtube.com/watch?v=8POOO76nhQk" class="video-card" target="_blank" rel="noopener">
                 <div class="video-thumb">
-                    <div style="background:#111;width:100%;height:100%;position:absolute;"></div>
-                    <img src="assets/images/reinvent-2025.jpg" alt="AWS re:Invent 2025" loading="lazy">
-                    <div class="video-badge">Coming Soon</div>
+                    <img src="https://img.youtube.com/vi/8POOO76nhQk/maxresdefault.jpg" alt="AWS re:Invent 2025" loading="lazy">
+                    <div class="video-play">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
                 </div>
                 <h3 class="video-title">AWS re:Invent 2025</h3>
                 <p class="video-meta">Featured Case Study</p>
-            </div>
+            </a>
             <div class="video-card video-card-soon">
                 <div class="video-thumb">
                     <img src="assets/images/conference-2025.jpg" alt="Global Franchisee Conference 2025" loading="lazy">
@@ -549,6 +581,24 @@
                 <h3 class="video-title">Chicken, Pizza, and Tacos, Oh My!</h3>
                 <p class="video-meta">Temporal Replay 2023</p>
             </a>
+        </div>
+    </section>
+
+    <section class="content-section" id="podcast">
+        <div class="section-header">
+            <p class="section-label">Podcast</p>
+        </div>
+        <div class="podcasts">
+            <div class="podcast-card">
+                <h3 class="video-title">/engineering growth: build skills, not titles</h3>
+                <p class="video-meta">The Forward Slash Podcast - Apr 1, 2026</p>
+                <iframe src="https://open.spotify.com/embed/episode/17KbhRcrJpE9qPTmEQE646?utm_source=generator" title="Spotify Embed: /engineering growth: build skills, not titles" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="podcast-card">
+                <h3 class="video-title">/survive the spike: scaling systems for millions of users</h3>
+                <p class="video-meta">The Forward Slash Podcast - Apr 8, 2026</p>
+                <iframe src="https://open.spotify.com/embed/episode/4ZNlFg8sOxKuVw6QNGtuDr?utm_source=generator" title="Spotify Embed: /survive the spike: scaling systems for millions of users" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
         </div>
     </section>
 

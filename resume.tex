@@ -18,7 +18,11 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\input{glyphtounicode}
+\usepackage{iftex}
+\ifPDFTeX
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
 
 %----------FONT OPTIONS----------
 % sans-serif
@@ -56,8 +60,7 @@
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+% Ensure that generated PDF is machine readable/ATS parsable when using pdfTeX.
 
 %-------------------------
 % Custom commands
@@ -126,26 +129,34 @@
 %-----------EXECUTIVE SUMMARY-----------
 \section{Executive Summary}
 \vspace{3pt}
-Global Chief Technology Officer for KFC, Taco Bell, and Pizza Hut, overseeing platforms and systems across \textbf{50,000 locations}. Founder and architect of \textbf{Byte by Yum}, a proprietary platform powering \textbf{\$20B in annual volume} across POS, digital commerce, and operations. Leads a global organization of \textbf{900+ engineers}, supporting \textbf{4M+ daily transactions at 99.99\% availability}. Accountable for enterprise-scale platform strategy, modernization, and M\&A integration.
+Hands-on technology executive who builds platforms and the organizations around them. Founded and architected \textbf{Byte by Yum}, growing it from first system to a \textbf{\$20B platform} run by a \textbf{900-engineer global team} across \textbf{50,000 restaurants}. Now CTO at State Farm, leading engineering for the largest home and auto insurer in the U.S.
 \vspace{-5pt}
 
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
 
+    %-----------STATE FARM-----------
+    \resumeCompanyHeader{State Farm}{Dallas, Texas}
+    \resumeCompanyDesc{Insurance and financial services company serving customers across the U.S.}
+
+    \resumeRole{Chief Technology Officer}{05/2026 -- Present}
+      \resumeItemListStart
+        \resumeItem{Leads engineering for enterprise platforms and technology systems across one of the largest insurance and financial services companies in the U.S.}
+      \resumeItemListEnd
+
     %-----------YUM BRANDS-----------
     \resumeCompanyHeader{Yum! Brands}{Plano, Texas}
     \resumeCompanyDesc{Global quick-service restaurant company with 61,000 locations in 155 countries (KFC, Taco Bell, Pizza Hut).}
     
-    % CURRENT ROLE
-    \resumeRole{Global Chief Technology Officer}{03/2025 -- Present}
+    \resumeRole{Global Chief Technology Officer}{03/2025 -- 05/2026}
       \resumeItemListStart
-        \resumeItem{Leads brand CTOs (Pizza Hut, Taco Bell, KFC) and Byte platform engineering globally.}
-        \resumeItem{Delivered \textbf{99.99\% platform availability} against 99.95\% SLA, preventing an estimated \textbf{\$5M+} in downtime losses; architecture featured in AWS re:Invent 2025 case study.}
-        \resumeItem{Shipped \textbf{Byte Connect}, a middleware platform integrating third-party delivery aggregators with Byte, from concept to production in 90 days; generated \textbf{\$7M first-year revenue} and eliminated \textbf{\$6M in order cancellation losses} at Pizza Hut US alone.}
+        \resumeItem{Led brand CTOs for KFC, Taco Bell, and Pizza Hut and Byte platform engineering globally, overseeing systems across \textbf{50,000 locations}.}
+        \resumeItem{Founder and architect of \textbf{Byte by Yum}, a proprietary platform powering \textbf{\$20B in annual volume} across POS, digital commerce, and restaurant operations.}
+        \resumeItem{Scaled global engineering organization to \textbf{900+ engineers}, supporting \textbf{4M+ daily transactions} across brands and regions.}
+        \resumeItem{Hardened core commerce and restaurant platforms for peak demand, preventing an estimated \textbf{\$5M+} in downtime losses; architecture featured in AWS re:Invent 2025 case study.}
+        \resumeItem{Shipped \textbf{Byte Connect}, a delivery aggregator platform connecting third-party marketplaces directly into Byte, from concept to production in 90 days; generated \textbf{\$7M first-year revenue} and eliminated \textbf{\$6M in order cancellation losses} at Pizza Hut US alone.}
         \resumeItem{Deployed Voice AI drive-thru to \textbf{500 Taco Bell locations}, integrating with \textbf{Byte POS} in under \textbf{3 months}; one of the largest QSR pilots in the industry.}
-        \resumeItem{Shipped AI-powered demand forecasting and upsell/personalization platforms, increasing average order value and optimizing labor across brands.}
-        \resumeItem{Established enterprise architecture across all brands, embedding architects within teams to eliminate duplicate initiatives and align platform decisions without slowing delivery.}
         \resumeItem{Expanded engineering capacity \textbf{30\%} through centers in Colombia, Vietnam, and India, reducing blended cost \textbf{40\%} while maintaining delivery quality.}
       \resumeItemListEnd
 
